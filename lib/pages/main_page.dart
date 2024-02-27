@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:food_app/pages/story_page.dart';
+import 'package:food_app/utility/item_card.dart';
 // import 'package:food_app/utility/modal.dart';
 import 'package:food_app/utility/my_box.dart';
 import 'package:food_app/utility/story_circles.dart';
@@ -103,27 +106,57 @@ class _MainPageState extends State<MainPage> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          Container(
-            height: 600,
-            child: GridView.builder(
-              physics: NeverScrollableScrollPhysics(),
-              itemCount: 20,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3, crossAxisSpacing: 5, // Number of columns
-              ),
-              itemBuilder: (BuildContext context, int index) {
-                return GestureDetector(
-                  onTap: () {
-                    // do some task
-                  },
-                  child: Container(
-                    margin: EdgeInsets.all(10),
-                    child: Center(child: MyBox()),
-                  ),
-                );
-              },
-            ),
+          Padding(
+            padding: EdgeInsets.all(10),
+            // child: Container(
+            //   height: 1200,
+            //   child: GridView.builder(
+            //     // physics: NeverScrollableScrollPhysics(),
+            //     itemCount: 4,
+            //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            //       crossAxisCount: 3,mainAxisSpacing: 150,  // Number of columns
+            //     ),
+            //     itemBuilder: (BuildContext context, int index) {
+            //       // return GestureDetector(
+            //       //   onTap: () {
+            //       //     // do some task
+            //       //   },
+            //       //   child: Container(
+            //       //     margin: EdgeInsets.all(10),
+            //       //     child: Center(child: MyBox()),
+            //       //   ),
+            //       // );
+            //       return ItemCard();
+            //     },
+            //   ),
+            // ),
           ),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ItemCard(),
+              ItemCard(),
+              ItemCard(),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ItemCard(),
+              ItemCard(),
+              ItemCard(),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ItemCard(),
+              ItemCard(),
+              ItemCard(),
+            ],
+          ),
+          
         ],
       ),
     );

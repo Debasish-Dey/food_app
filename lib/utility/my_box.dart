@@ -36,7 +36,7 @@ class _MyBoxState extends State<MyBox> {
   //   Data(image: "assets/images/11.avif", text: "Idli"),
   // ];
 
-
+   
   @override
   Widget build(BuildContext context) {
     return Padding(
